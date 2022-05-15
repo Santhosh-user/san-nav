@@ -119,14 +119,14 @@ fetch("https://api.pexels.com/v1/curated?per_page=80",{
 
 //   deleteProduct()
 
-  var wall = document.getElementById("nav1")
+  var wall = document.getElementById("productdisplay")
   function naveen (x) {
     
     x.forEach(function(e) {
 console.log(e.src)
     let div = document.createElement("div")
     let img = document.createElement("img")
-    img.src = e.src.small
+    img.src = e.src.medium
 
    
     div.append(img)
@@ -135,4 +135,25 @@ console.log(e.src)
 }
     )
   }
-
+  let element=document.getElementById("prodis")
+  let hideout=document.getElementById("hideit")
+  let tiws=document.getElementById("kkkkk")
+  let shower=document.getElementById("sortop")
+  window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    console.log(scroll)
+    if(scroll>=396){
+      element.style.zIndex="-4"
+      hideout.style.visibility="hidden"
+      tiws.style.visibility="hidden"
+      shower.style.position="fixed"
+      shower.style.top="0"
+      shower.style.zIndex="6"
+    }else{
+      element.style.zIndex="0"
+      hideout.style.visibility="visible"
+      tiws.style.visibility="visible"
+      shower.style.position="static"
+      shower.style.backgroundColor="transparent"
+    }
+});
