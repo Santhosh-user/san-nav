@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.2.4",
+    "pexels": "^1.3.0",
+    "unsplash-js": "^7.0.15"
+  },
+  "type": "module"
+}
