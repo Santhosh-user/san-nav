@@ -62,7 +62,22 @@ let data;
 fetch("https://api.pexels.com/v1/curated?per_page=80",{
   headers: {
     Authorization: '563492ad6f91700001000001f0e78500cb7e4b7fa22cb8d26a41cdd6'
-  }}).then(response => response.json()).then(result => naveen(result.photos)).catch(err => console.log(err))
+  }}).then(response => response.json()).then(result =>{
+
+    naveen(result.photos)
+    console.log(result)
+    
+  } ).catch(err => console.log(err))
+
+
+//   import { createClient } from 'pexels';
+
+// const client = createClient('563492ad6f91700001000001f0e78500cb7e4b7fa22cb8d26a41cdd6');
+// const query = 'Nature';
+
+// client.photos.search({ query, per_page: 1 }).then(photos => {...});
+
+
 
 
 
@@ -159,3 +174,25 @@ console.log(e.src)
       shou.style.display="none"
     }
 });
+var dm = document.getElementById("txt-input")
+
+let search_btn = document.getElementById("search-btn")
+
+var prod_dis = document.getElementById("productdisplay")
+
+
+search_btn.addEventListener("click", function(){
+  searchfun(1)
+})
+
+
+function searchfun(e){
+  fetch(`https://api.pexels.com/v1/search?query=${dm.value}&per_page=20`,{
+  headers: {
+    Authorization: '563492ad6f91700001000001f0e78500cb7e4b7fa22cb8d26a41cdd6'
+  }}).then(response => response.json()).then(result => {
+    prod_dis.innerHTML = null 
+    naveen(result.photos)
+  }).catch(err => console.log(err))
+}
+
