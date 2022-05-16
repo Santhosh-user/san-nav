@@ -139,6 +139,7 @@ console.log(e.src)
   let hideout=document.getElementById("hideit")
   let tiws=document.getElementById("kkkkk")
   let shower=document.getElementById("sortop")
+  let shou=document.getElementById("afterdisplay")
   window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
     console.log(scroll)
@@ -148,12 +149,13 @@ console.log(e.src)
       tiws.style.visibility="hidden"
       shower.style.position="fixed"
       shower.style.top="0"
-      shower.style.zIndex="6"
+      shou.style.display="block"
     }else{
       element.style.zIndex="0"
       hideout.style.visibility="visible"
       tiws.style.visibility="visible"
       shower.style.position="static"
       shower.style.backgroundColor="transparent"
+      shou.style.display="none"
     }
 });

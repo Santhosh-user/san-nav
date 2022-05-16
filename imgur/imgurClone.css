@@ -233,9 +233,13 @@ color:#8f8ea4 ;
      display: flex;
      align-items: center;
      justify-content: space-between;
-     color: lightslategray;
+     color: silver;
      
  }
+ #sortop h3{
+   display: flex;
+    align-items: center;
+}
  #productdisplay{
      width: 100%;
      height: auto;
@@ -249,3 +253,13 @@ color:#8f8ea4 ;
  height: auto;
 
 }
+.Dropdown-icon{
+ width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid  silver;
+  margin-left: 5px;
+
+}
+
